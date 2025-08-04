@@ -26,7 +26,7 @@ public class PageRequestDTO {
     private int page = 1;  // 첫페이지
 
     @Builder.Default
-    private int size = 5; // 게시물 수
+    private int size = 10; // 게시물 수
 
     private String type ;  // t, c, w , t c, t w ,t w c  ..... (다중검색용)
 
@@ -73,7 +73,7 @@ public class PageRequestDTO {
             // 넘어온 값이 널이거나 비어 있으면
             return null;
         }
-        return type.split(" "); // 차후에 프론트에 폼박스 확인하고 조절!!!!
+        return type.split(""); // 차후에 프론트에 폼박스 확인하고 조절!!!!
         // 문자열로 넘어온 값일 분할하여 배열에 꼽는다.
     }
 
